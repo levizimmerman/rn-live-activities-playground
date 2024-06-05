@@ -5,7 +5,7 @@ import useTimer from './src/hooks/use-timer';
 const {TimerWidgetModule} = NativeModules;
 
 const App: React.FC = () => {
-  const {value, play, reset} = useTimer();
+  const {value, play, reset, pause, isPlaying} = useTimer();
   return (
     <SafeAreaView
       style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
@@ -21,9 +21,12 @@ const App: React.FC = () => {
           paddingHorizontal: 48,
         }}>
         <View style={{marginRight: 32}}>
-          <Button title="Start Timer" onPress={play} />
+          <Button
+            title={isPlaying ? 'Pause' : 'Start'}
+            onPress={isPlaying ? pause : play}
+          />
         </View>
-        <Button title="Stop Timer" onPress={reset} />
+        <Button title="Reset" onPress={reset} />
       </View>
     </SafeAreaView>
   );
