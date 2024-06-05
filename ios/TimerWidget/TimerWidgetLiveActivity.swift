@@ -12,11 +12,15 @@ import SwiftUI
 struct TimerWidgetAttributes: ActivityAttributes {
     public struct ContentState: Codable, Hashable {
         // Dynamic stateful properties about your activity go here!
-        var emoji: String
+      var startedAt: Date?
+      
+      func getTimeIntervalSinceNow() -> Double {
+        guard let startedAt = self.startedAt else {
+          return 0
+        }
+        return startedAt.timeIntervalSince1970 - Date().timeIntervalSince1970
+      }
     }
-
-    // Fixed non-changing properties about your activity go here!
-    var name: String
 }
 
 struct TimerWidgetLiveActivity: Widget {
@@ -24,31 +28,45 @@ struct TimerWidgetLiveActivity: Widget {
         ActivityConfiguration(for: TimerWidgetAttributes.self) { context in
             // Lock screen/banner UI goes here
             VStack {
-                Text("Hello \(context.state.emoji)")
+              Text(
+                Date(timeIntervalSinceNow: context.state.getTimeIntervalSinceNow()),
+                style: .timer
+              )
+              .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+              .fontWeight(.medium)
+              .monospacedDigit()
             }
             .activityBackgroundTint(Color.cyan)
             .activitySystemActionForegroundColor(Color.black)
 
         } dynamicIsland: { context in
             DynamicIsland {
-                // Expanded UI goes here.  Compose the expanded UI through
-                // various regions, like leading/trailing/center/bottom
-                DynamicIslandExpandedRegion(.leading) {
-                    Text("Leading")
-                }
-                DynamicIslandExpandedRegion(.trailing) {
-                    Text("Trailing")
-                }
-                DynamicIslandExpandedRegion(.bottom) {
-                    Text("Bottom \(context.state.emoji)")
-                    // more content
-                }
+              DynamicIslandExpandedRegion(.center) {
+                Text(
+                  Date(timeIntervalSinceNow: context.state.getTimeIntervalSinceNow()),
+                  style: .timer
+                )
+                .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                .foregroundColor(.cyan)
+                .fontWeight(.medium)
+                .monospacedDigit()
+              }
             } compactLeading: {
-                Text("B")
+              Image(systemName: "timer")
+                .imageScale(.medium)
+                .foregroundColor(.cyan)
             } compactTrailing: {
-                Text("T \(context.state.emoji)")
+                Text(
+                  Date(timeIntervalSinceNow: context.state.getTimeIntervalSinceNow()),
+                  style: .timer
+                )
+                .foregroundColor(.cyan)
+                .frame(maxWidth: 32)
+                .monospacedDigit()
             } minimal: {
-                Text(context.state.emoji)
+              Image(systemName: "timer")
+                .imageScale(.medium)
+                .foregroundColor(.cyan)
             }
             .widgetURL(URL(string: "http://www.apple.com"))
             .keylineTint(Color.red)
@@ -58,28 +76,18 @@ struct TimerWidgetLiveActivity: Widget {
 
 extension TimerWidgetAttributes {
     fileprivate static var preview: TimerWidgetAttributes {
-        TimerWidgetAttributes(name: "World")
+        TimerWidgetAttributes()
     }
 }
 
 extension TimerWidgetAttributes.ContentState {
-    fileprivate static var smiley: TimerWidgetAttributes.ContentState {
-        TimerWidgetAttributes.ContentState(emoji: "😀")
+    fileprivate static var initState: TimerWidgetAttributes.ContentState {
+        TimerWidgetAttributes.ContentState(startedAt: Date())
      }
-     
-     fileprivate static var starEyes: TimerWidgetAttributes.ContentState {
-         TimerWidgetAttributes.ContentState(emoji: "🤩")
-     }
-  
-    fileprivate static var eggPlant: TimerWidgetAttributes.ContentState {
-        TimerWidgetAttributes.ContentState(emoji: "🍆")
-    }
 }
 
 #Preview("Notification", as: .content, using: TimerWidgetAttributes.preview) {
    TimerWidgetLiveActivity()
 } contentStates: {
-    TimerWidgetAttributes.ContentState.eggPlant
-    TimerWidgetAttributes.ContentState.smiley
-    TimerWidgetAttributes.ContentState.starEyes
+    TimerWidgetAttributes.ContentState.initState
 }
