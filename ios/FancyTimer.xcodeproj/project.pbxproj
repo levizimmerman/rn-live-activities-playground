@@ -15,6 +15,7 @@
 		36D1A438E3EB4E2B9A7EF7D4 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = F520D9635A57387412064716 /* PrivacyInfo.xcprivacy */; };
 		7699B88040F8A987B510C191 /* libPods-FancyTimer-FancyTimerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-FancyTimer-FancyTimerTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		FF1E5F842C10624500EBB595 /* TimerWidgetLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5C7AE02C0729BD002350F5 /* TimerWidgetLiveActivity.swift */; };
 		FF5C7ADA2C0729BD002350F5 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF5C7AD92C0729BD002350F5 /* WidgetKit.framework */; };
 		FF5C7ADC2C0729BD002350F5 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF5C7ADB2C0729BD002350F5 /* SwiftUI.framework */; };
 		FF5C7ADF2C0729BD002350F5 /* TimerWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5C7ADE2C0729BD002350F5 /* TimerWidgetBundle.swift */; };
@@ -501,6 +502,7 @@
 				13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 				FFF49D672C1052E300D619A2 /* TimerWidgetModule.swift in Sources */,
+				FF1E5F842C10624500EBB595 /* TimerWidgetLiveActivity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
