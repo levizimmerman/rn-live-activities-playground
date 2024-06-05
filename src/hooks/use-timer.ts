@@ -1,7 +1,11 @@
 import React from 'react';
-import {NativeModules} from 'react-native';
+import {NativeEventEmitter, NativeModules, NativeModule} from 'react-native';
 
 const {TimerWidgetModule} = NativeModules;
+
+const TimerEventEmitter = new NativeEventEmitter(
+  NativeModules.TimerEventEmitter as NativeModule,
+);
 
 const useTimer = () => {
   const [elapsedTimeInMs, setElapsedTimeInMs] = React.useState(0);
@@ -16,7 +20,7 @@ const useTimer = () => {
   const minutes = Math.floor(elapsedTimeInSeconds / 60);
   const value = `${minutes}:${secondTens}${secondUnits}`;
 
-  const play = () => {
+  const play = React.useCallback(() => {
     setIsPlaying(true);
 
     if (intervalId.current) {
@@ -38,8 +42,8 @@ const useTimer = () => {
 
     intervalId.current = setInterval(() => {
       setElapsedTimeInMs(Date.now() - startTime.current!);
-    }, 1000);
-  };
+    }, 32);
+  }, []);
 
   const removeInterval = () => {
     if (intervalId.current) {
@@ -48,7 +52,7 @@ const useTimer = () => {
     }
   };
 
-  const pause = () => {
+  const pause = React.useCallback(() => {
     setIsPlaying(false);
     removeInterval();
     if (startTime.current && !pausedTime.current) {
@@ -56,16 +60,28 @@ const useTimer = () => {
       TimerWidgetModule.pause(pausedTime.current / 1000);
       setElapsedTimeInMs(pausedTime.current! - startTime.current!);
     }
-  };
+  }, []);
 
-  const reset = () => {
+  const reset = React.useCallback(() => {
     setIsPlaying(false);
     removeInterval();
     startTime.current = null;
     pausedTime.current = null;
     setElapsedTimeInMs(0);
     TimerWidgetModule.stopLiveActivity();
-  };
+  }, []);
+
+  React.useEffect(() => {
+    const pauseSub = TimerEventEmitter.addListener('onPause', pause);
+    const resumeSub = TimerEventEmitter.addListener('onResume', play);
+    const resetSub = TimerEventEmitter.addListener('onReset', reset);
+
+    return () => {
+      pauseSub.remove();
+      resumeSub.remove();
+      resetSub.remove();
+    };
+  }, [pause, reset, play]);
 
   return {
     value,

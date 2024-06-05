@@ -18,6 +18,8 @@
 		FF1E5F842C10624500EBB595 /* TimerWidgetLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5C7AE02C0729BD002350F5 /* TimerWidgetLiveActivity.swift */; };
 		FF1E5F862C10AF6100EBB595 /* TimerWidgetLiveActivityIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E5F852C10AF6000EBB595 /* TimerWidgetLiveActivityIntent.swift */; };
 		FF1E5F8A2C10B30B00EBB595 /* IntentPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E5F892C10B30B00EBB595 /* IntentPlaceholder.swift */; };
+		FF1E5F8C2C10B3E800EBB595 /* TimerEventEmitter.m in Sources */ = {isa = PBXBuildFile; fileRef = FF1E5F8B2C10B3E800EBB595 /* TimerEventEmitter.m */; };
+		FF1E5F8E2C10B47700EBB595 /* TimerEventEmitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E5F8D2C10B47700EBB595 /* TimerEventEmitter.swift */; };
 		FF5C7ADA2C0729BD002350F5 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF5C7AD92C0729BD002350F5 /* WidgetKit.framework */; };
 		FF5C7ADC2C0729BD002350F5 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF5C7ADB2C0729BD002350F5 /* SwiftUI.framework */; };
 		FF5C7ADF2C0729BD002350F5 /* TimerWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5C7ADE2C0729BD002350F5 /* TimerWidgetBundle.swift */; };
@@ -82,6 +84,8 @@
 		F520D9635A57387412064716 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xml; name = PrivacyInfo.xcprivacy; path = FancyTimer/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		FF1E5F852C10AF6000EBB595 /* TimerWidgetLiveActivityIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerWidgetLiveActivityIntent.swift; sourceTree = "<group>"; };
 		FF1E5F892C10B30B00EBB595 /* IntentPlaceholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentPlaceholder.swift; sourceTree = "<group>"; };
+		FF1E5F8B2C10B3E800EBB595 /* TimerEventEmitter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimerEventEmitter.m; sourceTree = "<group>"; };
+		FF1E5F8D2C10B47700EBB595 /* TimerEventEmitter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerEventEmitter.swift; sourceTree = "<group>"; };
 		FF5C7AD82C0729BD002350F5 /* TimerWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TimerWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF5C7AD92C0729BD002350F5 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		FF5C7ADB2C0729BD002350F5 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
@@ -223,6 +227,8 @@
 				FFF49D652C1052E300D619A2 /* FancyTimer-Bridging-Header.h */,
 				FF1E5F852C10AF6000EBB595 /* TimerWidgetLiveActivityIntent.swift */,
 				FF1E5F892C10B30B00EBB595 /* IntentPlaceholder.swift */,
+				FF1E5F8B2C10B3E800EBB595 /* TimerEventEmitter.m */,
+				FF1E5F8D2C10B47700EBB595 /* TimerEventEmitter.swift */,
 			);
 			path = TimerWidget;
 			sourceTree = "<group>";
@@ -504,12 +510,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF1E5F8C2C10B3E800EBB595 /* TimerEventEmitter.m in Sources */,
 				FF1E5F862C10AF6100EBB595 /* TimerWidgetLiveActivityIntent.swift in Sources */,
 				FFF49D6A2C10547100D619A2 /* TimerWidgetBridge.m in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 				FFF49D672C1052E300D619A2 /* TimerWidgetModule.swift in Sources */,
 				FF1E5F842C10624500EBB595 /* TimerWidgetLiveActivity.swift in Sources */,
+				FF1E5F8E2C10B47700EBB595 /* TimerEventEmitter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
