@@ -21,6 +21,9 @@
 		FF5C7AE12C0729BD002350F5 /* TimerWidgetLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5C7AE02C0729BD002350F5 /* TimerWidgetLiveActivity.swift */; };
 		FF5C7AE52C0729BF002350F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF5C7AE42C0729BF002350F5 /* Assets.xcassets */; };
 		FF5C7AE92C0729BF002350F5 /* TimerWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = FF5C7AD82C0729BD002350F5 /* TimerWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		FFF49D672C1052E300D619A2 /* TimerWidgetModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF49D662C1052E300D619A2 /* TimerWidgetModule.swift */; };
+		FFF49D682C1052E300D619A2 /* TimerWidgetModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF49D662C1052E300D619A2 /* TimerWidgetModule.swift */; };
+		FFF49D6A2C10547100D619A2 /* TimerWidgetBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = FFF49D692C10547100D619A2 /* TimerWidgetBridge.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +84,9 @@
 		FF5C7AE02C0729BD002350F5 /* TimerWidgetLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerWidgetLiveActivity.swift; sourceTree = "<group>"; };
 		FF5C7AE42C0729BF002350F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FF5C7AE62C0729BF002350F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FFF49D652C1052E300D619A2 /* FancyTimer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FancyTimer-Bridging-Header.h"; sourceTree = "<group>"; };
+		FFF49D662C1052E300D619A2 /* TimerWidgetModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerWidgetModule.swift; sourceTree = "<group>"; };
+		FFF49D692C10547100D619A2 /* TimerWidgetBridge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimerWidgetBridge.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,6 +213,9 @@
 				FF5C7AE02C0729BD002350F5 /* TimerWidgetLiveActivity.swift */,
 				FF5C7AE42C0729BF002350F5 /* Assets.xcassets */,
 				FF5C7AE62C0729BF002350F5 /* Info.plist */,
+				FFF49D662C1052E300D619A2 /* TimerWidgetModule.swift */,
+				FFF49D692C10547100D619A2 /* TimerWidgetBridge.m */,
+				FFF49D652C1052E300D619A2 /* FancyTimer-Bridging-Header.h */,
 			);
 			path = TimerWidget;
 			sourceTree = "<group>";
@@ -289,7 +298,7 @@
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
-						LastSwiftMigration = 1120;
+						LastSwiftMigration = 1540;
 					};
 					FF5C7AD72C0729BD002350F5 = {
 						CreatedOnToolsVersion = 15.4;
@@ -488,8 +497,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFF49D6A2C10547100D619A2 /* TimerWidgetBridge.m in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				FFF49D672C1052E300D619A2 /* TimerWidgetModule.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -499,6 +510,7 @@
 			files = (
 				FF5C7AE12C0729BD002350F5 /* TimerWidgetLiveActivity.swift in Sources */,
 				FF5C7ADF2C0729BD002350F5 /* TimerWidgetBundle.swift in Sources */,
+				FFF49D682C1052E300D619A2 /* TimerWidgetModule.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -522,6 +534,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5B7EB9410499542E8C5724F5 /* Pods-FancyTimer-FancyTimerTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -549,6 +562,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 89C6BE57DB24E9ADA2F236DE /* Pods-FancyTimer-FancyTimerTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = FancyTimerTests/Info.plist;
@@ -591,6 +605,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = FancyTimer;
+				SWIFT_OBJC_BRIDGING_HEADER = "TimerWidget/FancyTimer-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -618,6 +633,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = FancyTimer;
+				SWIFT_OBJC_BRIDGING_HEADER = "TimerWidget/FancyTimer-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
