@@ -1,8 +1,6 @@
 import React from 'react';
-import {Button, SafeAreaView, NativeModules, View, Text} from 'react-native';
+import {Button, SafeAreaView, View, Text} from 'react-native';
 import useTimer from './src/hooks/use-timer';
-
-const {TimerWidgetModule} = NativeModules;
 
 const App: React.FC = () => {
   const {value, play, reset, pause, isPlaying} = useTimer();
