@@ -77,25 +77,72 @@ struct TimerWidgetLiveActivity: Widget {
         } dynamicIsland: { context in
             DynamicIsland {
               DynamicIslandExpandedRegion(.center) {
-                if (context.state.isRunning()) {
-                  Text(
-                    Date(timeIntervalSinceNow: context.state.getTimeIntervalSinceNow()),
-                    style: .timer
-                  )
-                  .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
-                  .foregroundColor(.cyan)
-                  .fontWeight(.medium)
-                  .monospacedDigit()
-                } else {
-                  Text(
-                    context.state.getPausedTime()
-                  )
-                  .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
-                  .foregroundColor(.cyan)
-                  .fontWeight(.medium)
-                  .monospacedDigit()
-                  .transition(.identity)
+                ZStack {
+                  RoundedRectangle(cornerRadius: 24).strokeBorder(Color(red: 148/255.0, green: 163/255.0, blue: 184/255.0), lineWidth: 2)
+                  HStack {
+                    HStack(spacing: 8.0, content: {
+                      if (context.state.isRunning()) {
+                        Button(intent: PauseIntent()) {
+                          ZStack {
+                            Circle().fill(Color.cyan.opacity(0.5))
+                            Image(systemName: "pause.fill")
+                              .imageScale(.large)
+                              .foregroundColor(.cyan)
+                          }
+                        }
+                        .buttonStyle(PlainButtonStyle())
+                        .contentShape(Rectangle())
+                      } else {
+                        Button(intent: ResumeIntent()) {
+                          ZStack {
+                            Circle().fill(Color.cyan.opacity(0.5))
+                            Image(systemName: "play.fill")
+                              .imageScale(.large)
+                              .foregroundColor(.cyan)
+                          }
+                        }
+                        .buttonStyle(PlainButtonStyle()) // Removes default button styling
+                        .contentShape(Rectangle())
+                      }
+                      Button(intent: ResetIntent()) {
+                        ZStack {
+                          Circle().fill(.gray.opacity(0.5))
+                          Image(systemName: "xmark")
+                            .imageScale(.medium)
+                            .foregroundColor(.white)
+                        }
+                      }
+                      .buttonStyle(PlainButtonStyle()) // Removes default button styling
+                      .contentShape(Rectangle())
+                      Spacer()
+                    })
+                    if (!context.state.isRunning()) {
+                      Text(
+                        context.state.getPausedTime()
+                      )
+                      .font(.title)
+                      .foregroundColor(.cyan)
+                      .fontWeight(.medium)
+                      .monospacedDigit()
+                      .transition(.identity)
+                    } else {
+                      Text(
+                        Date(
+                          timeIntervalSinceNow: context.state.getTimeIntervalSinceNow()
+                        ),
+                        style: .timer
+                      )
+                      .font(.title)
+                      .foregroundColor(.cyan)
+                      .fontWeight(.medium)
+                      .monospacedDigit()
+                      .frame(width: 60)
+                      .transition(.identity)
+                    }
+                  }
+                  .padding()
                 }
+                .padding()
               }
             } compactLeading: {
               Image(systemName: "timer")
