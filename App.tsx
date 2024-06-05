@@ -1,29 +1,29 @@
 import React from 'react';
-import {Button, SafeAreaView, NativeModules, View} from 'react-native';
+import {Button, SafeAreaView, NativeModules, View, Text} from 'react-native';
+import useTimer from './src/hooks/use-timer';
 
 const {TimerWidgetModule} = NativeModules;
 
 const App: React.FC = () => {
+  const {value, play, reset} = useTimer();
   return (
-    <SafeAreaView style={{flex: 1, justifyContent: 'center'}}>
+    <SafeAreaView
+      style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+      <View style={{paddingVertical: 32}}>
+        <Text style={{fontSize: 80, fontVariant: ['tabular-nums']}}>
+          {value}
+        </Text>
+      </View>
       <View
         style={{
           flexDirection: 'row',
           justifyContent: 'space-between',
           paddingHorizontal: 48,
         }}>
-        <Button
-          title="Start Timer"
-          onPress={() => {
-            TimerWidgetModule.startLiveActivity();
-          }}
-        />
-        <Button
-          title="Stop Timer"
-          onPress={() => {
-            TimerWidgetModule.stopLiveActivity();
-          }}
-        />
+        <View style={{marginRight: 32}}>
+          <Button title="Start Timer" onPress={play} />
+        </View>
+        <Button title="Stop Timer" onPress={reset} />
       </View>
     </SafeAreaView>
   );
