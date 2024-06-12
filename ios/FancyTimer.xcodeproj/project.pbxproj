@@ -20,6 +20,12 @@
 		FF1E5F8A2C10B30B00EBB595 /* IntentPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E5F892C10B30B00EBB595 /* IntentPlaceholder.swift */; };
 		FF1E5F8C2C10B3E800EBB595 /* TimerEventEmitter.m in Sources */ = {isa = PBXBuildFile; fileRef = FF1E5F8B2C10B3E800EBB595 /* TimerEventEmitter.m */; };
 		FF1E5F8E2C10B47700EBB595 /* TimerEventEmitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E5F8D2C10B47700EBB595 /* TimerEventEmitter.swift */; };
+		FF1E5F962C19991000EBB595 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF5C7AD92C0729BD002350F5 /* WidgetKit.framework */; };
+		FF1E5F972C19991000EBB595 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF5C7ADB2C0729BD002350F5 /* SwiftUI.framework */; };
+		FF1E5F9A2C19991000EBB595 /* MatchTrackerWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E5F992C19991000EBB595 /* MatchTrackerWidgetBundle.swift */; };
+		FF1E5F9C2C19991000EBB595 /* MatchTrackerWidgetLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E5F9B2C19991000EBB595 /* MatchTrackerWidgetLiveActivity.swift */; };
+		FF1E5FA02C19991300EBB595 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF1E5F9F2C19991300EBB595 /* Assets.xcassets */; };
+		FF1E5FA42C19991300EBB595 /* MatchTrackerWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = FF1E5F952C19991000EBB595 /* MatchTrackerWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		FF5C7ADA2C0729BD002350F5 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF5C7AD92C0729BD002350F5 /* WidgetKit.framework */; };
 		FF5C7ADC2C0729BD002350F5 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF5C7ADB2C0729BD002350F5 /* SwiftUI.framework */; };
 		FF5C7ADF2C0729BD002350F5 /* TimerWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5C7ADE2C0729BD002350F5 /* TimerWidgetBundle.swift */; };
@@ -39,6 +45,13 @@
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
 			remoteInfo = FancyTimer;
 		};
+		FF1E5FA22C19991300EBB595 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FF1E5F942C19991000EBB595;
+			remoteInfo = MatchTrackerWidgetExtension;
+		};
 		FF5C7AE72C0729BF002350F5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
@@ -56,6 +69,7 @@
 			dstSubfolderSpec = 13;
 			files = (
 				FF5C7AE92C0729BF002350F5 /* TimerWidgetExtension.appex in Embed Foundation Extensions */,
+				FF1E5FA42C19991300EBB595 /* MatchTrackerWidgetExtension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -86,6 +100,12 @@
 		FF1E5F892C10B30B00EBB595 /* IntentPlaceholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentPlaceholder.swift; sourceTree = "<group>"; };
 		FF1E5F8B2C10B3E800EBB595 /* TimerEventEmitter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimerEventEmitter.m; sourceTree = "<group>"; };
 		FF1E5F8D2C10B47700EBB595 /* TimerEventEmitter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerEventEmitter.swift; sourceTree = "<group>"; };
+		FF1E5F952C19991000EBB595 /* MatchTrackerWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MatchTrackerWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF1E5F992C19991000EBB595 /* MatchTrackerWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchTrackerWidgetBundle.swift; sourceTree = "<group>"; };
+		FF1E5F9B2C19991000EBB595 /* MatchTrackerWidgetLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchTrackerWidgetLiveActivity.swift; sourceTree = "<group>"; };
+		FF1E5F9F2C19991300EBB595 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FF1E5FA12C19991300EBB595 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF1E5FA82C19A0A100EBB595 /* FancyTimer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = FancyTimer.entitlements; path = FancyTimer/FancyTimer.entitlements; sourceTree = "<group>"; };
 		FF5C7AD82C0729BD002350F5 /* TimerWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TimerWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF5C7AD92C0729BD002350F5 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		FF5C7ADB2C0729BD002350F5 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
@@ -112,6 +132,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C80B921A6F3F58F76C31292 /* libPods-FancyTimer.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF1E5F922C19991000EBB595 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF1E5F972C19991000EBB595 /* SwiftUI.framework in Frameworks */,
+				FF1E5F962C19991000EBB595 /* WidgetKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,6 +176,7 @@
 		13B07FAE1A68108700A75B9A /* FancyTimer */ = {
 			isa = PBXGroup;
 			children = (
+				FF1E5FA82C19A0A100EBB595 /* FancyTimer.entitlements */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
@@ -185,6 +215,7 @@
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* FancyTimerTests */,
 				FF5C7ADD2C0729BD002350F5 /* TimerWidget */,
+				FF1E5F982C19991000EBB595 /* MatchTrackerWidget */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
@@ -200,6 +231,7 @@
 				13B07F961A680F5B00A75B9A /* FancyTimer.app */,
 				00E356EE1AD99517003FC87E /* FancyTimerTests.xctest */,
 				FF5C7AD82C0729BD002350F5 /* TimerWidgetExtension.appex */,
+				FF1E5F952C19991000EBB595 /* MatchTrackerWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -213,6 +245,17 @@
 				89C6BE57DB24E9ADA2F236DE /* Pods-FancyTimer-FancyTimerTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		FF1E5F982C19991000EBB595 /* MatchTrackerWidget */ = {
+			isa = PBXGroup;
+			children = (
+				FF1E5F992C19991000EBB595 /* MatchTrackerWidgetBundle.swift */,
+				FF1E5F9B2C19991000EBB595 /* MatchTrackerWidgetLiveActivity.swift */,
+				FF1E5F9F2C19991300EBB595 /* Assets.xcassets */,
+				FF1E5FA12C19991300EBB595 /* Info.plist */,
+			);
+			path = MatchTrackerWidget;
 			sourceTree = "<group>";
 		};
 		FF5C7ADD2C0729BD002350F5 /* TimerWidget */ = {
@@ -274,11 +317,29 @@
 			);
 			dependencies = (
 				FF5C7AE82C0729BF002350F5 /* PBXTargetDependency */,
+				FF1E5FA32C19991300EBB595 /* PBXTargetDependency */,
 			);
 			name = FancyTimer;
 			productName = FancyTimer;
 			productReference = 13B07F961A680F5B00A75B9A /* FancyTimer.app */;
 			productType = "com.apple.product-type.application";
+		};
+		FF1E5F942C19991000EBB595 /* MatchTrackerWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FF1E5FA52C19991300EBB595 /* Build configuration list for PBXNativeTarget "MatchTrackerWidgetExtension" */;
+			buildPhases = (
+				FF1E5F912C19991000EBB595 /* Sources */,
+				FF1E5F922C19991000EBB595 /* Frameworks */,
+				FF1E5F932C19991000EBB595 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MatchTrackerWidgetExtension;
+			productName = MatchTrackerWidgetExtension;
+			productReference = FF1E5F952C19991000EBB595 /* MatchTrackerWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 		FF5C7AD72C0729BD002350F5 /* TimerWidgetExtension */ = {
 			isa = PBXNativeTarget;
@@ -313,6 +374,9 @@
 					13B07F861A680F5B00A75B9A = {
 						LastSwiftMigration = 1540;
 					};
+					FF1E5F942C19991000EBB595 = {
+						CreatedOnToolsVersion = 15.4;
+					};
 					FF5C7AD72C0729BD002350F5 = {
 						CreatedOnToolsVersion = 15.4;
 					};
@@ -334,6 +398,7 @@
 				13B07F861A680F5B00A75B9A /* FancyTimer */,
 				00E356ED1AD99517003FC87E /* FancyTimerTests */,
 				FF5C7AD72C0729BD002350F5 /* TimerWidgetExtension */,
+				FF1E5F942C19991000EBB595 /* MatchTrackerWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -353,6 +418,14 @@
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				36D1A438E3EB4E2B9A7EF7D4 /* PrivacyInfo.xcprivacy in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF1E5F932C19991000EBB595 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF1E5FA02C19991300EBB595 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -521,6 +594,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FF1E5F912C19991000EBB595 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF1E5F9A2C19991000EBB595 /* MatchTrackerWidgetBundle.swift in Sources */,
+				FF1E5F9C2C19991000EBB595 /* MatchTrackerWidgetLiveActivity.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FF5C7AD42C0729BD002350F5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -539,6 +621,11 @@
 			isa = PBXTargetDependency;
 			target = 13B07F861A680F5B00A75B9A /* FancyTimer */;
 			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
+		};
+		FF1E5FA32C19991300EBB595 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FF1E5F942C19991000EBB595 /* MatchTrackerWidgetExtension */;
+			targetProxy = FF1E5FA22C19991300EBB595 /* PBXContainerItemProxy */;
 		};
 		FF5C7AE82C0729BF002350F5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -608,6 +695,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = FancyTimer/FancyTimer.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = JB3BDGC96R;
 				ENABLE_BITCODE = NO;
@@ -638,6 +726,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = FancyTimer/FancyTimer.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = JB3BDGC96R;
 				INFOPLIST_FILE = FancyTimer/Info.plist;
@@ -732,7 +821,10 @@
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 				);
-				OTHER_LDFLAGS = "$(inherited)  ";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					" ",
+				);
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				USE_HERMES = true;
@@ -804,11 +896,99 @@
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 				);
-				OTHER_LDFLAGS = "$(inherited)  ";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					" ",
+				);
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				USE_HERMES = true;
 				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FF1E5FA62C19991300EBB595 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = JB3BDGC96R;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MatchTrackerWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = MatchTrackerWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = nl.levizimmerman.livetimer.MatchTrackerWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FF1E5FA72C19991300EBB595 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = JB3BDGC96R;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MatchTrackerWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = MatchTrackerWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = nl.levizimmerman.livetimer.MatchTrackerWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -923,6 +1103,15 @@
 			buildConfigurations = (
 				83CBBA201A601CBA00E9B192 /* Debug */,
 				83CBBA211A601CBA00E9B192 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FF1E5FA52C19991300EBB595 /* Build configuration list for PBXNativeTarget "MatchTrackerWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF1E5FA62C19991300EBB595 /* Debug */,
+				FF1E5FA72C19991300EBB595 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
