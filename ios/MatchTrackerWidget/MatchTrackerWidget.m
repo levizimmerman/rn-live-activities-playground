@@ -7,7 +7,7 @@
 
 #import <React/RCTBridgeModule.h>
 
-@interface RCT_EXTERN_MODULE(MatchTrackerModule, NSObject)
+@interface RCT_EXTERN_MODULE(MatchTrackerWidgetModule, NSObject)
 
 + (bool)requiresMainQueueSetup {
   return NO;

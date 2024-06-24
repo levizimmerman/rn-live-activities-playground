@@ -18,6 +18,7 @@
 		FF06D1212C295FE40080FCD6 /* MatchTrackerWidgetModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF06D1202C295FE40080FCD6 /* MatchTrackerWidgetModule.swift */; };
 		FF06D1222C295FE40080FCD6 /* MatchTrackerWidgetModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF06D1202C295FE40080FCD6 /* MatchTrackerWidgetModule.swift */; };
 		FF06D1252C2961A50080FCD6 /* MatchTrackerWidget.m in Sources */ = {isa = PBXBuildFile; fileRef = FF06D1242C2961A50080FCD6 /* MatchTrackerWidget.m */; };
+		FF06D1262C2965DF0080FCD6 /* MatchTrackerWidgetLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E5F9B2C19991000EBB595 /* MatchTrackerWidgetLiveActivity.swift */; };
 		FF1E5F842C10624500EBB595 /* TimerWidgetLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5C7AE02C0729BD002350F5 /* TimerWidgetLiveActivity.swift */; };
 		FF1E5F862C10AF6100EBB595 /* TimerWidgetLiveActivityIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E5F852C10AF6000EBB595 /* TimerWidgetLiveActivityIntent.swift */; };
 		FF1E5F8A2C10B30B00EBB595 /* IntentPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E5F892C10B30B00EBB595 /* IntentPlaceholder.swift */; };
@@ -597,6 +598,7 @@
 				FF06D1212C295FE40080FCD6 /* MatchTrackerWidgetModule.swift in Sources */,
 				FFF49D6A2C10547100D619A2 /* TimerWidgetBridge.m in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */,
+				FF06D1262C2965DF0080FCD6 /* MatchTrackerWidgetLiveActivity.swift in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 				FF06D1252C2961A50080FCD6 /* MatchTrackerWidget.m in Sources */,
 				FFF49D672C1052E300D619A2 /* TimerWidgetModule.swift in Sources */,
