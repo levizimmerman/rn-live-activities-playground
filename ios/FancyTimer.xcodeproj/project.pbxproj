@@ -15,6 +15,9 @@
 		36D1A438E3EB4E2B9A7EF7D4 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = F520D9635A57387412064716 /* PrivacyInfo.xcprivacy */; };
 		7699B88040F8A987B510C191 /* libPods-FancyTimer-FancyTimerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-FancyTimer-FancyTimerTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		FF06D1212C295FE40080FCD6 /* MatchTrackerWidgetModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF06D1202C295FE40080FCD6 /* MatchTrackerWidgetModule.swift */; };
+		FF06D1222C295FE40080FCD6 /* MatchTrackerWidgetModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF06D1202C295FE40080FCD6 /* MatchTrackerWidgetModule.swift */; };
+		FF06D1252C2961A50080FCD6 /* MatchTrackerWidget.m in Sources */ = {isa = PBXBuildFile; fileRef = FF06D1242C2961A50080FCD6 /* MatchTrackerWidget.m */; };
 		FF1E5F842C10624500EBB595 /* TimerWidgetLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5C7AE02C0729BD002350F5 /* TimerWidgetLiveActivity.swift */; };
 		FF1E5F862C10AF6100EBB595 /* TimerWidgetLiveActivityIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E5F852C10AF6000EBB595 /* TimerWidgetLiveActivityIntent.swift */; };
 		FF1E5F8A2C10B30B00EBB595 /* IntentPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E5F892C10B30B00EBB595 /* IntentPlaceholder.swift */; };
@@ -96,6 +99,9 @@
 		89C6BE57DB24E9ADA2F236DE /* Pods-FancyTimer-FancyTimerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FancyTimer-FancyTimerTests.release.xcconfig"; path = "Target Support Files/Pods-FancyTimer-FancyTimerTests/Pods-FancyTimer-FancyTimerTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		F520D9635A57387412064716 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xml; name = PrivacyInfo.xcprivacy; path = FancyTimer/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		FF06D1202C295FE40080FCD6 /* MatchTrackerWidgetModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchTrackerWidgetModule.swift; sourceTree = "<group>"; };
+		FF06D1232C2960890080FCD6 /* FancyTimer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FancyTimer-Bridging-Header.h"; sourceTree = "<group>"; };
+		FF06D1242C2961A50080FCD6 /* MatchTrackerWidget.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MatchTrackerWidget.m; sourceTree = "<group>"; };
 		FF1E5F852C10AF6000EBB595 /* TimerWidgetLiveActivityIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerWidgetLiveActivityIntent.swift; sourceTree = "<group>"; };
 		FF1E5F892C10B30B00EBB595 /* IntentPlaceholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentPlaceholder.swift; sourceTree = "<group>"; };
 		FF1E5F8B2C10B3E800EBB595 /* TimerEventEmitter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimerEventEmitter.m; sourceTree = "<group>"; };
@@ -254,6 +260,9 @@
 				FF1E5F9B2C19991000EBB595 /* MatchTrackerWidgetLiveActivity.swift */,
 				FF1E5F9F2C19991300EBB595 /* Assets.xcassets */,
 				FF1E5FA12C19991300EBB595 /* Info.plist */,
+				FF06D1202C295FE40080FCD6 /* MatchTrackerWidgetModule.swift */,
+				FF06D1232C2960890080FCD6 /* FancyTimer-Bridging-Header.h */,
+				FF06D1242C2961A50080FCD6 /* MatchTrackerWidget.m */,
 			);
 			path = MatchTrackerWidget;
 			sourceTree = "<group>";
@@ -585,9 +594,11 @@
 			files = (
 				FF1E5F8C2C10B3E800EBB595 /* TimerEventEmitter.m in Sources */,
 				FF1E5F862C10AF6100EBB595 /* TimerWidgetLiveActivityIntent.swift in Sources */,
+				FF06D1212C295FE40080FCD6 /* MatchTrackerWidgetModule.swift in Sources */,
 				FFF49D6A2C10547100D619A2 /* TimerWidgetBridge.m in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				FF06D1252C2961A50080FCD6 /* MatchTrackerWidget.m in Sources */,
 				FFF49D672C1052E300D619A2 /* TimerWidgetModule.swift in Sources */,
 				FF1E5F842C10624500EBB595 /* TimerWidgetLiveActivity.swift in Sources */,
 				FF1E5F8E2C10B47700EBB595 /* TimerEventEmitter.swift in Sources */,
@@ -600,6 +611,7 @@
 			files = (
 				FF1E5F9A2C19991000EBB595 /* MatchTrackerWidgetBundle.swift in Sources */,
 				FF1E5F9C2C19991000EBB595 /* MatchTrackerWidgetLiveActivity.swift in Sources */,
+				FF06D1222C295FE40080FCD6 /* MatchTrackerWidgetModule.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -821,10 +833,7 @@
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					" ",
-				);
+				OTHER_LDFLAGS = "$(inherited)  ";
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				USE_HERMES = true;
@@ -896,10 +905,7 @@
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					" ",
-				);
+				OTHER_LDFLAGS = "$(inherited)  ";
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				USE_HERMES = true;
